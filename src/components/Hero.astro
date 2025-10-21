@@ -1,0 +1,382 @@
+---
+// Hero section component
+---
+
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Technical SEO Expert for <span class="highlight">E-commerce Success</span></h1>
+            <p class="hero-subtitle">Maximize your online store's visibility, performance, and conversions with data-driven technical SEO strategies and comprehensive site optimization.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Sites Optimized</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">Avg. Traffic Increase</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openCalendlyModal()">Book a Consultation</button>
+                <a href="#services" class="btn-secondary">View Services</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <div class="card-header">
+                    <div class="card-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="card-title">SEO Performance</span>
+                </div>
+                <div class="card-content">
+                    <div class="metric">
+                        <span class="metric-label">Organic Traffic</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="metric-value">+85%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Core Web Vitals</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" style="width: 92%"></div>
+                        </div>
+                        <span class="metric-value">92/100</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Conversion Rate</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" style="width: 78%"></div>
+                        </div>
+                        <span class="metric-value">+78%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hero Section */
+.hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-gray) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Hero Visual */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.card-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e0;
+}
+
+.card-dots span:first-child {
+  background: #fc8181;
+}
+
+.card-dots span:nth-child(2) {
+  background: #f6e05e;
+}
+
+.card-dots span:last-child {
+  background: #68d391;
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric {
+  margin-bottom: 1.5rem;
+}
+
+.metric:last-child {
+  margin-bottom: 0;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.metric-bar {
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.metric-fill {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.metric-value {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+</style>
+
+<script>
+// Animate Hero Stats Counter
+function animateCounter(element: HTMLElement, target: number, duration = 2000) {
+  const start = 0;
+  const increment = target / (duration / 16);
+  let current = start;
+  
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    
+    if (element.textContent?.includes('%')) {
+      element.textContent = Math.floor(current) + '%';
+    } else if (element.textContent?.includes('+')) {
+      element.textContent = Math.floor(current) + '+';
+    } else {
+      element.textContent = Math.floor(current).toString();
+    }
+  }, 16);
+}
+
+// Trigger counter animation when hero section is visible
+const heroObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const statNumbers = document.querySelectorAll('.stat-number');
+      statNumbers.forEach(stat => {
+        const text = stat.textContent;
+        if (text?.includes('150')) {
+          animateCounter(stat as HTMLElement, 150);
+        } else if (text?.includes('40')) {
+          animateCounter(stat as HTMLElement, 40);
+        } else if (text?.includes('5')) {
+          animateCounter(stat as HTMLElement, 5);
+        }
+      });
+      heroObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroObserver.observe(heroSection);
+  }
+});
+
+// Animate Hero Card Metrics
+const metricsObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const metricFills = entry.target.querySelectorAll('.metric-fill');
+      metricFills.forEach((fill, index) => {
+        setTimeout(() => {
+          const fillElement = fill as HTMLElement;
+          const targetWidth = fillElement.style.width || '0%';
+          fillElement.style.width = '0%';
+          setTimeout(() => {
+            fillElement.style.width = targetWidth;
+          }, 100);
+        }, index * 200);
+      });
+      metricsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const heroCard = document.querySelector('.hero-card');
+  if (heroCard) {
+    metricsObserver.observe(heroCard);
+  }
+});
+</script>

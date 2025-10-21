@@ -1,0 +1,31 @@
+{
+  "name": "tea-pisac-benes-website",
+  "version": "1.0.0",
+  "description": "Professional website for Technical SEO consultant Tea Pisac Beneš built with Astro",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev", 
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "vercel-build": "astro build"
+  },
+  "keywords": [
+    "seo",
+    "technical-seo",
+    "ecommerce",
+    "consulting",
+    "website",
+    "astro"
+  ],
+  "author": "Tea Pisac Beneš",
+  "license": "MIT",
+  "dependencies": {
+    "astro": "^4.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.3.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,239 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+}
+
+const { title, description = "Expert Technical SEO consultant specializing in e-commerce optimization, platform migrations, and conversion rate optimization.", keywords = "technical SEO, e-commerce SEO, platform migration, conversion optimization, CRO, SEO audit" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content={keywords}>
+    <meta name="author" content="Tea Pisac Beneš">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://teapisacbenes.com/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teapisacbenes.com/">
+    <meta property="og:image" content="https://teapisacbenes.com/images/tea-pisac-benes-seo-consultant.jpg">
+    <meta property="og:site_name" content="Tea Pisac Beneš SEO Consulting">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content="https://teapisacbenes.com/images/tea-pisac-benes-seo-consultant.jpg">
+    <meta name="twitter:creator" content="@teapisacbenes">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://assets.calendly.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    
+    <!-- Critical CSS and Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tea Pisac Beneš SEO Consulting",
+      "url": "https://teapisacbenes.com",
+      "logo": "https://teapisacbenes.com/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+385-XX-XXX-XXXX",
+        "contactType": "customer service",
+        "email": "tea@teapisacbenes.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/teapisacbenes",
+        "https://twitter.com/teapisacbenes"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tea Pisac Beneš",
+      "jobTitle": "Technical SEO Consultant",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tea Pisac Beneš SEO Consulting"
+      },
+      "url": "https://teapisacbenes.com",
+      "image": "https://teapisacbenes.com/images/tea-pisac-benes.jpg",
+      "email": "tea@teapisacbenes.com",
+      "knowsAbout": [
+        "Technical SEO",
+        "E-commerce Optimization", 
+        "Platform Migration",
+        "Conversion Rate Optimization",
+        "SEO Auditing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/teapisacbenes"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Professional Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Technical SEO Consulting Services",
+      "description": "Expert technical SEO services for e-commerce businesses including audits, platform migrations, and conversion optimization.",
+      "provider": {
+        "@type": "Person",
+        "name": "Tea Pisac Beneš"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": "SEO Consulting",
+      "url": "https://teapisacbenes.com",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <slot />
+    
+    <script>
+      // Performance monitoring and Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        try {
+          // Largest Contentful Paint (LCP)
+          new PerformanceObserver((entryList) => {
+            for (const entry of entryList.getEntries()) {
+              console.log('LCP:', entry.startTime);
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'web_vitals', {
+                  name: 'LCP',
+                  value: Math.round(entry.startTime),
+                  event_category: 'Web Vitals'
+                });
+              }
+            }
+          }).observe({entryTypes: ['largest-contentful-paint']});
+
+          // First Input Delay (FID)
+          new PerformanceObserver((entryList) => {
+            for (const entry of entryList.getEntries()) {
+              console.log('FID:', entry.processingStart - entry.startTime);
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'web_vitals', {
+                  name: 'FID',
+                  value: Math.round(entry.processingStart - entry.startTime),
+                  event_category: 'Web Vitals'
+                });
+              }
+            }
+          }).observe({entryTypes: ['first-input']});
+
+          // Cumulative Layout Shift (CLS)
+          let clsValue = 0;
+          new PerformanceObserver((entryList) => {
+            for (const entry of entryList.getEntries()) {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value;
+              }
+            }
+            console.log('CLS:', clsValue);
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'web_vitals', {
+                name: 'CLS',
+                value: Math.round(clsValue * 1000),
+                event_category: 'Web Vitals'
+              });
+            }
+          }).observe({entryTypes: ['layout-shift']});
+        } catch (e) {
+          console.log('Performance monitoring not supported');
+        }
+      }
+    </script>
+</body>
+</html>
+
+<style is:global>
+  /* Performance Optimizations */
+  :root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --background-light: #f7fafc;
+    --background-gray: #edf2f7;
+    --border-color: #e2e8f0;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
+    --transition-fast: 0.3s ease;
+    --transition-smooth: 0.5s ease;
+    --border-radius: 8px;
+    --border-radius-lg: 16px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--white);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+</style>

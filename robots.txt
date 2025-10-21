@@ -1,0 +1,50 @@
+# Robots.txt for Tea Pisac Beneš SEO Consulting
+# https://teapisacbenes.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://teapisacbenes.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+# Disallow: /private/
+# Disallow: /admin/
+# Disallow: /temp/
+
+# Allow specific important files
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/
+Allow: /favicon.ico
+
+# Block access to sensitive files
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.env$
+Disallow: /.*
+
+# SEO-friendly directives
+# Allow search engines to crawl CSS and JS for better rendering
+User-agent: Googlebot
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Disallow: /
