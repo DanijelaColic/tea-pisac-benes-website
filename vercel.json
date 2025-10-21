@@ -1,4 +1,6 @@
 {
+  "buildCommand": "echo 'Using static HTML files'",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",
